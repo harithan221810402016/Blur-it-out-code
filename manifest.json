@@ -1,0 +1,29 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      },
+      "default_popup": "browser_action.html",
+      "default_title": "Blur It Out Settings"
+   },
+   "content_scripts": [ {
+      "css": [ "mystyles.css" ],
+      "js": [ "third-party/jquery-1.12.0.min.js", "myscript.js" ],
+      "matches": [ "https://*/*", "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "A simple extension that blurs out words you don't like",
+   "icons": {
+      "128": "images/icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmDIxUcU6dfkfdAnqE7F8iv5Gw12rdK+sB6PTGspthW3M+D8lm1yz8BUCjltlQ4Ky8oRsAxduRwoKCp8EONs4e30Z06fWqUC05KBCewD7RoUh7sHW7QYvg2KIRczRcBMk/T0hNrSGiy6IaPY5LLA+2KRLJnwickAoT5081q3egeI3y5T+OT1BJcVVT5OgSlyjEZztXbDXrayIuV35yMrMKi2tQh/h1HX7qwsGTOUBUwfYRqmzWFiFUxLjBmyMK2fFPtP8oIk26Uej9ZRL+YGjAlsKJHjxNZgkf0qhiB+dzKGhHOebt/jW0ogQ1Q8mfpv4p0XqzcSj3syTwR7qc9qkzwIDAQAB",
+   "manifest_version": 2,
+   "name": "Blur It Out",
+   "permissions": [ "storage", "https://*/*", "http://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}
